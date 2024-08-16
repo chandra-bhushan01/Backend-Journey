@@ -1,6 +1,6 @@
-Back-End Importent points and notes-
+# Back-End Notes
 
-# Node.js Overview
+## Node.js Overview
 
 Node.js is a runtime environment that allows you to run JavaScript code on the server side, outside of a web browser. It is built on Google's V8 JavaScript engine, which is the same engine that powers Chrome. Node.js is designed for building scalable, high-performance applications, particularly those that require handling a large number of simultaneous connections with low latency.
 
@@ -45,12 +45,8 @@ Node.js is also used in task automation tools and build scripts, often in combin
 
 
 
-
+## Importent Points to Remember
 As Javascript can't create a server alone, a js wrapper recieves the code and  uses the V8 engin's C++ module to create a server.
-
-
-
-
 
 - Synchronous code: Codes that are executed line by line ie these codes are processed on the Main Stack (Call Stack). This follows LIFO (Last In, First Out). In simple words it is a blocking code.
 
@@ -66,3 +62,18 @@ As Javascript can't create a server alone, a js wrapper recieves the code and  u
 - Event Loop: The event loop continually checks the call stack and these queues. If the call stack is empty, the event loop pushes tasks from the event queue or microtask queue to the call stack for execution.
 
 - Microtasks vs. Macrotasks: Microtasks (like Promise callbacks) have higher priority and are executed before any other tasks in the event queue.
+
+
+
+## file System Module
+- writefile: This function is used to write data into file and create the file if not present.
+
+- appendfile: This funciton is used to update ie append the file with addition data. this doesn't replace the data already present.
+
+- rename: this function allows to rename the name of the file. takes three arguments original name, new name and a callback funciton.
+
+- copyfile: Used to copy a file to a perticual directory if directory present and path provided, if not a cop is created in the same directory. The name of both files must be diffrent in the same directory else curernt file will be replaced.
+
+- unlink: used to delete a file form the directory and has a colback function for errors.
+
+- rmdir: This function used to delete the folder untill the folder is empty and if not empty use "{recursive:true}".
