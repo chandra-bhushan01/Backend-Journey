@@ -70,12 +70,26 @@ var answer = abcd();
 
 
 
-//line by line code execution is called synchronous.
-// code of async nature should be send to side stack or event loop, after all the synchronous code is executed/ main stack is empty then check if async code is completed. if completed then move to main stack/ call stack.
-var blob = await fetch(
-  "https://https://api.api-ninjas.com/v1/randomuser.typicode.com/todos/1"
-);
 
-var res = await blob.json();
+// var blob = await fetch(
+//   "https://https://api.api-ninjas.com/v1/randomuser.typicode.com/todos/1"
+// );
 
-console.log(res);
+// var res = await blob.json();
+
+// console.log(res);
+
+
+async function getApiResponse() {
+    var blob = await fetch("https://randomuser.me/api/");
+
+    var res = await blob.json();
+    console.log(res);
+
+}
+
+
+getApiResponse();
+
+
+
