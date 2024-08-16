@@ -10,7 +10,7 @@
 
 var arr = [1, 2, 3, 4, 5];
 arr.forEach(function(element) {
-    console.log(element + " hello");
+    // console.log(element + " hello");
 })
 
 
@@ -18,7 +18,7 @@ arr.forEach(function(element) {
 var ans = arr.map(function(element) {
     return element * 2;
 })
-console.log(ans);
+// console.log(ans);
 
 
 
@@ -27,18 +27,18 @@ var arry = arr.filter(function(element) {
     return element > 3? true : false;
 })
 
- console.log(arry);
+//  console.log(arry);
 
 // find function returns the value of the first element in the provided array that satisfies the provided testing function
 var found = arr.find(function(element) {
     return (element > 3);
 })
 
- console.log(found);
+//  console.log(found);
 
 
 //find the index of the first element in the provided array that is present in the array.
- console.log(arr.indexOf(4))
+//  console.log(arr.indexOf(4))
 
 
 
@@ -51,5 +51,31 @@ var obj= {
 //freeze an object makes it unchangeable. once an object is frozen, it cannot be changed.
 Object.freeze(obj);
 
-console.log(obj.name);
-console.log(obj["name"])
+// console.log(obj.name);
+// console.log(obj["name"])
+
+
+
+function abcd(){
+    return "hello world";
+}
+
+
+
+
+var answer = abcd();
+// console.log(answer);
+
+
+
+
+
+//line by line code execution is called synchronous.
+// code of async nature should be send to side stack or event loop, after all the synchronous code is executed/ main stack is empty then check if async code is completed. if completed then move to main stack/ call stack.
+var blob = await fetch(
+  "https://https://api.api-ninjas.com/v1/randomuser.typicode.com/todos/1"
+);
+
+var res = await blob.json();
+
+console.log(res);
