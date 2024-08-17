@@ -2,6 +2,11 @@ const fs = require("fs")
 const http = require("http")
 
 
+
+const express = require("express")
+const app = express()
+
+
 // writefile, appendfile, copyfile, renamefile, unlinkfile
 
 /*
@@ -53,13 +58,38 @@ fs.readFile("hey.txt",(error,data)=>{
 })
 
 
-*/
 
 const server = http.createServer((req,res)=>{
     res.end("Hello World");
-
+    
 })
 
 server.listen(3000)
 
+*/
+
+
+//setting up basic express application.
+//routing 
+//middlewares
+//request and response handling 
+//error handling
+
+/*
+
+ */
+
+//takes 3 arguments: path, request handler methord, and next.
+app.get("/",(req,res)=>{
+    res.send("Hello World");
+})
+
+
+
+app.get("/profile",(req,res)=>{
+    res.send("i am chandra bhushan form the web development field");
+})
+
+
+app.listen(3000)
 

@@ -63,9 +63,12 @@ As Javascript can't create a server alone, a js wrapper recieves the code and  u
 
 - Microtasks vs. Macrotasks: Microtasks (like Promise callbacks) have higher priority and are executed before any other tasks in the event queue.
 
+- dev dependencies: packeges that we are only using at the time of devlopment. (npm i nodemon --save--dev)
+
+- diff btw "npm start", "npm run dev" and "npm run cuncurrent".
 
 
-## file System Module
+## File System Module
 - writefile: This function is used to write data into file and create the file if not present.
 
 - appendfile: This funciton is used to update ie append the file with addition data. this doesn't replace the data already present.
@@ -77,3 +80,12 @@ As Javascript can't create a server alone, a js wrapper recieves the code and  u
 - unlink: used to delete a file form the directory and has a colback function for errors.
 
 - rmdir: This function used to delete the folder untill the folder is empty and if not empty use "{recursive:true}".
+
+
+
+## Express.Js
+### Introduction to Express.js
+Express js is a npm package. It is a framework and manages everything from recieving the requests and giving the response.
+
+- middleware: whenever a server accepts a request. And we stop the request form reaching the routes and perform some additional function and then send it to the routes. these elements are called middleware. 
+[accept] ----------[middleware]--------- [response]
