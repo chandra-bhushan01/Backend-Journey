@@ -87,5 +87,49 @@ As Javascript can't create a server alone, a js wrapper recieves the code and  u
 ### Introduction to Express.js
 Express js is a npm package. It is a framework and manages everything from recieving the requests and giving the response.
 
-- middleware: whenever a server accepts a request. And we stop the request form reaching the routes and perform some additional function and then send it to the routes. these elements are called middleware. 
+- middleware: whenever a server accepts a request. And we stop the request form reaching the routes and perform some additional function and then send it to the routes. these elements are called middleware. \n
 [accept] ----------[middleware]--------- [response]
+
+
+
+### What is a Session?
+
+A **session** in web development is a mechanism to store data on the server for individual users, identified by a unique session ID. This session ID is usually stored in a cookie on the user's browser. Sessions allow the server to remember user-specific data across different HTTP requests, maintaining the user's state throughout their interaction with a web application.
+
+### Key Concepts
+
+1. **State Management**:
+   - HTTP is inherently stateless, meaning it doesn't retain information about previous interactions.
+   - Sessions enable the server to maintain user state across multiple requests, such as login status, shopping cart contents, and personalized settings.
+
+2. **Session ID**:
+   - When a session is created, the server generates a unique identifier known as a session ID.
+   - This ID is sent to the client's browser and is typically stored in a cookie.
+
+3. **Session Storage**:
+   - The session data associated with the session ID is stored on the server.
+   - This data can be stored in various places such as memory, a database, or a file, and may include user preferences, authentication tokens, etc.
+
+4. **Session Lifetime**:
+   - Sessions usually have an expiration time. After a set period of inactivity, the session will expire, and the user may need to log in again.
+
+5. **Security**:
+   - Proper management of sessions is essential for security.
+   - Secure session IDs should be generated and transmitted over HTTPS to prevent session hijacking.
+
+### Example Workflow
+
+1. **User Logs In**:
+   - The server authenticates the user and creates a session.
+   - A session ID is sent to the user's browser in a cookie.
+
+2. **User Navigates the Site**:
+   - With each new request, the browser sends the session ID back to the server.
+   - The server retrieves the associated session data and recognizes the user.
+
+3. **Session Ends**:
+   - The session can end either when the user logs out, closes the browser, or after a set period of inactivity.
+
+### Summary
+
+Sessions are a fundamental aspect of web applications, allowing servers to maintain continuity between user interactions. They enable the storage and retrieval of user-specific data across multiple requests, providing a more dynamic and personalized web experience.

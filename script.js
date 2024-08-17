@@ -77,7 +77,6 @@ server.listen(3000)
 
 /*
 
- */
 
 //takes 3 arguments: path, request handler methord, and next.
 app.get("/",(req,res)=>{
@@ -91,5 +90,34 @@ app.get("/profile",(req,res)=>{
 })
 
 
+app.use((req,res,next)=>{
+    console.log("middleware is working");
+    next();
+})
+app.use((req,res,next)=>{
+    console.log("2 middleware is working");
+    next();
+})
+
+
+app.get("/",(req,res)=>{
+    res.send(`Hello World, i am chandra bhushan.`);
+})
+app.get("/about",(req,res)=>{
+    res.send(`This is the about page.`);
+})
+app.get("/profile",(req,res,next)=>{
+    return next(new Error("Page not found")); //this wil come on console
+})
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send("Something broke!");//this will come on browser/forntend
+});
+
+
+
 app.listen(3000)
+
+*/
 
