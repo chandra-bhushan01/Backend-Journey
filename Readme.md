@@ -133,3 +133,37 @@ A **session** in web development is a mechanism to store data on the server for 
 ### Summary
 
 Sessions are a fundamental aspect of web applications, allowing servers to maintain continuity between user interactions. They enable the storage and retrieval of user-specific data across multiple requests, providing a more dynamic and personalized web experience.
+
+
+
+## Data Storage
+### Types of Databases
+- there are 2 types of database and can be classified as SQL and NoSQL
+   -  SQL stores data into tables.
+   - NoSQL stores the data in the form of objects.  
+
+### Terminologies
+
+1. Collections
+- A **collection** in databases like MongoDB is equivalent to a table in relational databases.
+- It stores **documents** (similar to rows in relational databases).
+- Collections don't enforce a schema, so documents within the same collection can have different structures.
+
+2. Documents
+- A **document** is an individual record within a collection.
+- Documents are stored in a **JSON-like** format (BSON in MongoDB), consisting of key-value pairs.
+- Documents can contain nested fields and arrays.
+
+3. Schemas
+- A **schema** defines the structure of a document.
+- Schemas are optional in MongoDB but can be enforced using libraries like **Mongoose**.
+- A schema specifies which fields a document should have, their types, and any validation rules.
+
+4. Keys
+- **Keys** are the field names in a document.
+- Each key is associated with a value, forming key-value pairs.
+
+5. Models
+- **Models** represent collections of documents in your application.
+- Models use schemas to enforce structure and rules on the documents they manage.
+- They allow you to interact with the collection using various methods like `find()`, `create()`, and `update()`.
